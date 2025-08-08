@@ -1,30 +1,4 @@
-let products = ["apple", "banana", "kivi", "orange"]
-
-class Storage {
-    constructor({ items }) {
-        this.items = items
-    }
-
-    addItem(item) {
-        this.items.push(item)
-        return this.items
-    }
-
-    removeItem(item) {
-        for (let i = 0; i < this.items.length; i++) {
-            if (item === this.items[i]) {
-                this.items.splice(i, 1)
-                return this.items
-            }
-        }
-        return this.items
-    }
-
-    getItems() {
-        return this.items
-    }
-}
-
-let listProducts = new Storage({ items: products })
-
-console.log(listProducts.addItem("banana"))
+let img = document.querySelector('.img')
+let link = document.querySelector('.link')
+img.alt = "це просто фото на сайті"
+link.href = 'https://www.google.com/search?q=%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%B4%D0%B0%D1%87&rlz=1C1PNFB_enUA966UA973&oq=%D0%BF%D0%B5%D1%80&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg5MgYIAhAjGCcyDAgDEAAYQxiABBiKBTIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQLhiABNIBCTcwMzRqMGoxNagCCLACAfEFogL7A3YiJiXxBaIC-wN2IiYl&sourceid=chrome&ie=UTF-8'
