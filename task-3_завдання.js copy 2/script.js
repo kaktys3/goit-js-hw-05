@@ -1,4 +1,40 @@
-let img = document.querySelector('.img')
-let link = document.querySelector('.link')
-img.alt = "це просто фото на сайті"
-link.href = 'https://www.google.com/search?q=%D0%BF%D0%B5%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%B4%D0%B0%D1%87&rlz=1C1PNFB_enUA966UA973&oq=%D0%BF%D0%B5%D1%80&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg5MgYIAhAjGCcyDAgDEAAYQxiABBiKBTIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQLhiABNIBCTcwMzRqMGoxNagCCLACAfEFogL7A3YiJiXxBaIC-wN2IiYl&sourceid=chrome&ie=UTF-8'
+
+let gallery = document.querySelector('#gallery')
+
+const images = [
+    {
+        url:
+            'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        alt: 'White and Black Long Fur Cat',
+    },
+    {
+        url:
+            'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+    },
+    {
+        url:
+            'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        alt: 'Group of Horses Running',
+    },
+];
+
+for (let i = 0; i < images.length; i++) {
+    let newGalleryElement = document.createElement('li')
+    let newGalleryImg = document.createElement('img')
+
+    newGalleryImg.src = images[i].url
+    newGalleryImg.alt = images[i].alt
+    newGalleryImg.style.width = '300px'
+    newGalleryImg.style.height = '300px'
+
+    newGalleryElement.style.listStyle = 'none'
+
+    gallery.style.display = 'flex'
+    gallery.style.gap = '60px'
+    gallery.style.justifyContent = 'center'
+    gallery.style.background = 'green'
+
+    newGalleryElement.append(newGalleryImg)
+    gallery.append(newGalleryElement)
+}
